@@ -12,9 +12,11 @@ class User(models.Model):
     age = models.IntegerField(default=18, verbose_name='年龄')
     # null=True：生成数据表时，数据表的对应字段允许为NULL
     mobile = models.CharField(max_length=11, null=True, verbose_name='手机号')
-
+    
     class Meta:
         # 指定迁移时生成的数据表的名称
         db_table = 'tb_users'
         # 模型类的解析说明，相当于注释的作用
         verbose_name = '用户表'
+
+        
